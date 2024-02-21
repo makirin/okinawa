@@ -2,151 +2,1691 @@ body {
   margin: 0;
 }
 
-
-/* メインビジュアル */
-#main {
-  width: 100%;
-  display: flex;
-  padding-bottom: 5%
-}
-
-#menu {
-  width: 5%;
-  margin: 0 auto;
-  height: 50vw;
-  overflow: hidden;
-  font-family: "Noto Sans JP";
-  font-size: 1.5vw;
-  letter-spacing: 0.5vw;
-  border-right: 1px solid #8CFEFE;
-  position: relative;
-  
-}
-
-#menu-inner {
-  position: absolute;
-  top: 0; 
-  left: 0;
-  height: 100%;
-}
-
-#menu-inner > ul {
-  margin:0;
-  padding: 0;
-  width: 100%;
-  padding-top: 3%;
-}
-
-/* メニューアニメーション */
-@keyframes loop{
-  0% {transform: translateY(100%);
+@media screen and (min-width: 768px) {
+  /* メインビジュアル */
+  #main {
+    width: 100%;
+    display: flex;
+    padding-bottom: 5%
   }
-  to {transform: translateY(-100%);
+
+  #menu {
+    width: 5%;
+    margin: 0 auto;
+    height: 50vw;
+    overflow: hidden;
+    font-family: "Noto Sans JP";
+    font-size: 1.5vw;
+    letter-spacing: 0.5vw;
+    border-right: 1px solid #8CFEFE;
+    position: relative;
+    
+  }
+
+  #menu-inner {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: 100%;
+  }
+
+  #menu-inner > ul {
+    margin:0;
+    padding: 0;
+    width: 100%;
+    padding-top: 3%;
+  }
+
+  #menu ul:first-child {
+    animation: loop 40s -20s linear infinite;
+  }
+
+  #menu ul:last-child {
+    animation: loop2 40s linear infinite;
+  }
+
+  #menu-list {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #menu-list > a:link {
+    color: #0d0d0d;
+  }
+  #menu-list > a:visited {
+    color: #0d0d0d;
+  }
+  #menu-list > a:hover {
+    color: #0d0d0d;
+    opacity: 0.6;
+  }
+  #menu-list > a:active {
+    color: #0d0d0d;
+  }
+
+  .menu-img {
+    display: block;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    padding-left:20%;
+    width: 60%;
+  }
+
+  .menu-title {
+    -ms-writing-mode: tb-rl;
+    -webkit-writhing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    padding-bottom: 20%;
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  /* スマホ用ナビを非表示 */
+  #nav-sp, #menu-sp {
+    display: none;
+  }
+
+  #main-text-set {
+    width: 40%;
+    font-family: "Potta One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+
+  #main-text-set > h1 {
+    font-size: 8vw;
+    letter-spacing: 2vw;
+    margin: 0;
+    padding-top: 10%;
+    padding-bottom: 3%;
+  }
+
+  #main-text-set > h3 {
+    font-size: 3.5vw;
+    margin: 0;
+    padding-bottom: 15%;
+  }
+
+  .catchcopy-japanese {
+    font-size: 1.5vw;
+    margin: 0;
+    padding-bottom: 5%;
+  }
+
+  .catchcopy-english {
+    font-size: 1.5vw;
+    margin: 0;
+    padding-bottom: 2%;
+  }
+
+  .catchcopy-english-sp {
+    display: none;
+  }
+
+  #img-container {
+    width: 55%;
+    height: 50vw;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .main-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: img-anime 25S infinite;
+  }
+
+  /* About okinawa */
+  #what {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+
+  #what-set {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    padding: 0, 5%;
+  }
+
+  #what-img-set {
+    width: 60%;
+  }
+  #what-img-set-sp{
+    display: none;
+  }
+
+  #what-img-set > table {
+    width:90%;
+  }
+
+  .what-img-top {
+    display: block;
+    width: 100%;
+  }
+
+  .what-img {
+    display: block;
+    width: 100%;
+  }
+
+  .nature-img{
+    opacity: 1;
+    border: 2px solid #8CFEFE;
+  }
+
+  .spot-img {
+    opacity: 0.5;
+  }
+
+  .eat-img {
+    opacity: 0.5;
+  }
+
+  .culture-img {
+    opacity: 0.5;
+  }
+
+  .history-img {
+    opacity: 0.5;
+  }
+
+  #what-text-set {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  #what-text-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 2.5vw;
+    text-align: center;
+    margin: 0;
+  }
+
+  #what-text-set > h4 {
+    font-family: "Potta One", system-ui;
+    font-size: 1.8vw;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  /* 5つの魅力 */
+  #what-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .nature-set{
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .spot-set {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .eat-set {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .culture-set {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .history-set {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .what-title-img {
+    display: block;
+    width: 10%;
+    height: auto;
+  }
+
+  .what-title-set > h5 {
+    width: 40%;
+    font-family: "Noto Sans JP";
+    font-size: 1.8vw;
+    letter-spacing: 1VW;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .what-title-set {
+    display: flex;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 5%;
+  }
+
+  .nature-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 1.5vw;
+    color: #378EDB;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .spot-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 1.5vw;
+    color: #FF00AE;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .eat-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 1.5vw;
+    color: #EBAE2C;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .culture-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 1.5vw;
+    color: #012701;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .history-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 1.5vw;
+    color: #4B4B4B;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .what-text {
+    width: 100%;
+    font-family: "Noto Sans JP";
+    font-size: 1.2vw;
+    letter-spacing: 0.3VW;
+    padding-top: 3%;
+    margin: 0 auto;
+  }
+
+  /* 地域ごとに見る */
+  #map {
+    width: 100%;
+    padding-bottom: 5%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #map-set {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #map-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 2.5vw;
+    position: static;
+  }
+
+  .map-pc {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    position: static;
+  }
+
+  .map-sp {
+    display: none;
+  }
+
+  .region-text-set {
+    color: #ffffff;
+    width: 10%;
+    text-align: center;
+    padding: 1% 0;
+    border-radius: 15%;
+    text-decoration: none;
+  }
+
+  .region-text-set > h4 {
+    font-family: "Noto Sans JP";
+    font-size: 1.6vw;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .region-text-set > p {
+    font-family: "Noto Sans JP";
+    font-size: 1.2vw;
+    margin: 0;
+  }
+
+  .north-top {
+    background-color: #02434F;
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    opacity: 0.5;
+  }
+
+  .north-center {
+    background-color: #00839B;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    opacity: 0.5;
+  }
+
+  .north-bottom {
+    background-color: #37DAC9;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    opacity: 0.5;
+  }
+
+  .middle {
+    background-color: #378FDA;
+    position: absolute;
+    top: 65%;
+    left: 55%;
+    opacity: 0.5;
+  }
+
+  .south-top {
+    background-color: #3759DA;
+    position: absolute;
+    top: 75%;
+    left: 8%;
+  }
+
+  .south-bottom {
+    background-color: #37C5DA;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    opacity: 0.5;
+  }
+
+  .one-text {
+    padding: 10% 0;
+  }
+
+  /* 地域説明 */
+  #region {
+    width: 100%;
+    height: 165vw;
+    padding-top: 5%;
+    padding-bottom: 8%;
+  }
+
+  #region-conteiner {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .region-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .region-name-set{
+    color: #ffffff;
+    width: 15%;
+    text-align: center;
+    padding: 1% 0;
+    border-radius: 10%;
+  }
+
+  .region-name-set > h4 {
+    font-family: "Noto Sans JP";
+    font-size: 1.6vw;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .region-name-set > p {
+    font-family: "Noto Sans JP";
+    font-size: 1.2vw;
+    margin: 0;
+  }
+
+  .north-top-name {
+    background-color: #02434F;
+  }
+
+  .north-center-name {
+    background-color: #00839B;
+  }
+
+  .north-bottom-name {
+    background-color: #37DAC9;
+  }
+
+  .middle-name {
+    background-color: #378FDA;
+  }
+
+  .south-top-name {
+    background-color: #3759DA;
+  }
+
+  .south-bottom-name {
+    background-color: #37C5DA;
+  }
+
+  .one-text {
+    padding: 10% 0;
+  }
+
+  .region-title {
+    font-family: "Noto Sans JP";
+    font-size: 1.6vw;
+    font-weight: bold;
+  }
+
+  .region-text {
+    font-family: "Noto Sans JP";
+    font-size: 1.4vw;
+    padding-bottom: 3%;
+  }
+
+  .region-contents > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 2.3vw;
+    text-decoration-line: underline;
+    text-decoration-color: #8CFEFE;
+  }
+
+  .region-img-set {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+  }
+
+  .region-img-set-two {
+    width: 80%;
+    display:flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .region-img-one {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .region-img-two {
+    width: 45%;
+  }
+
+  .region-img-three {
+    width: 30%;
+  }
+
+  .region-img {
+    width: 100%;
+  }
+
+  .region-img-name {
+    font-family: "Noto Sans JP";
+    font-size: 1vw;
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+  }
+
+  .region-version-set{
+    width: 100%;
+    padding-bottom: 1%;
+  }
+  .region-version {
+    font-family: "Noto Sans JP";
+    font-size: 1.4vw;
+  }
+
+  .region-version > span {
+    font-family: "Noto Sans JP";
+    font-size: 1.8vw;
+    font-weight: bold;
+  }
+
+  .north-top-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .north-center-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .north-bottom-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .middle-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .south-top-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .south-bottom-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  #return-region {
+    width: 15%;
+    float: right;
+    padding-top: 2%;
+    margin-right: 5%;
+    padding-bottom: 5%;
+  }
+
+  .return-region-img {
+    display: block;
+    width: 100%;
+  }
+
+  /* おすすめスポット */
+  #suggest {
+    width: 100%;
+    margin-top: 10%;
+    padding-bottom: 5%;
+  }
+
+  #suggest-set {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #suggest-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 2.5vw;
+    margin: 0;
+    padding-bottom: 3%;
+  }
+
+  .suggest-title {
+    font-family: "Noto Sans JP";
+    font-size: 1.4vw;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .suggest-text {
+    font-family: "Noto Sans JP";
+    font-size: 1.2vw;
+  }
+
+  /* 離島 */
+  #island {
+    width: 100%;
+    margin-top: 8%;
+    padding-bottom: 5%;
+  }
+
+  #island-set {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #island-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 2.5vw;
+    margin: 0;
+    padding-bottom: 3%;
+  }
+
+  .island-img-set-two {
+    width: 85%;
+    display:flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .island-img-two {
+    width: 45%;
+  }
+
+  .island-title {
+    font-family: "Noto Sans JP";
+    font-size: 1.6vw;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .island-text {
+    font-family: "Noto Sans JP";
+    font-size: 1.4vw;
+  }
+
+  .island-text > span {
+    font-size: 1.6vw;
+    font-weight: bold;
+  }
+
+  /* その他離島 */
+  #island-other {
+    width: 100%;
+    padding-bottom: 5%;
+    margin: 0 auto;
+  }
+
+  #island-other-set {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #island-other-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 2.3vw;
+    text-decoration-line: underline;
+    text-decoration-color: #8CFEFE;
+    margin: 0;
+    padding-bottom: 3%;
+  }
+
+  #island-other-img-set {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .island-other-left {
+    width: 30%;
+  }
+
+  .island-other-lord {
+    width: 7%;
+    padding: 1% 0;
+  }
+  .island-other-center {
+    width: 20%;
+  }
+
+  .island-other-right {
+    width: 30%;
+    padding-left: 13%;
+  }
+
+  .island-other-img {
+    display: inline-block;
+    width: 100%;
+  } 
+
+  #island-other-text-set {
+    display: flex;
+    width: 100%;
+  }
+
+  .island-other-text-left {
+    width: 30%;
+  }
+
+  .island-other-text-center {
+    width: 21%;
+    padding-left: 7%;
+    margin: 0 auto;
+  }
+
+  .island-other-text-right {
+    width: 30%;
+    padding-left: 12%
+  }
+
+  .island-other-title {
+    font-family: "Noto Sans JP";
+    font-size: 1.4vw;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .island-other-text {
+    font-family: "Noto Sans JP";
+    font-size: 1.2vw;
+  }
+
+  header {
+    text-align: center;
+    background-color: #8CFEFE;
+    padding: 2% 0;
+  }
+
+  header > p {
+    font-family: "Noto Sans JP";
+    font-size: 1vw;
+    margin: 0;
+    line-height: 2vw;
+  }
+
+  /* メニューアニメーション */
+  @keyframes loop{
+    0% {transform: translateY(100%);
+    }
+    to {transform: translateY(-100%);
+    }
+  }
+
+  @keyframes loop2{
+    0% {transform: translateY(0%);
+    }
+    to {transform: translateY(-200%);
+    }
   }
 }
 
-@keyframes loop2{
-  0% {transform: translateY(0%);
+@media screen and (max-width: 767px) {
+  /* メインビジュアル */
+  #main {
+    width: 100%;
+    padding-bottom: 5%
   }
-  to {transform: translateY(-200%);
+
+  #menu {
+    display: none;
   }
+
+  /* ハンバーガーメニュー */
+  #menu-sp {
+    width: 8%;
+    height: auto;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+  }
+
+  /* スマホ用ナビゲーションの表示切替*/
+  /* 初期状態、レイアウトと非表示設定 */
+  #nav-sp {
+    background-color: #8CFEFE;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50vw;
+    width: 100%;
+    padding-top: 15%;
+    text-align: right;
+    display: none;
+    z-index: 100;
 }
 
-#menu ul:first-child {
-  animation: loop 40s -20s linear infinite;
+   /* ×ボタン */
+   #close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-sp > a {
+    display: block;
+
+    line-height: 10VW;
+  }
+
+  #nav-sp > a:link {
+      color: #00839B;
+  }
+  #nav-sp > a:visited {
+      color: #00839B;
+  }
+  #nav-sp > a:hover {
+      color: #00839B;
+      text-decoration: underline;
+  }
+  #nav-sp > a:active {
+      color: #00839B;
+  }
+
+  #nav-sp > .menu-title {
+    text-decoration: none;
+    display: block;
+    margin: 0 20px 0 20px;
+    font-size: 4vw;
+    padding-bottom: 5px;
 }
 
-#menu ul:last-child {
-  animation: loop2 40s linear infinite;
-}
+  #main-text-set {
+    width: 100%;
+    font-family: "Potta One", system-ui;
+    text-align: center;
+  }
 
-#menu-list {
-  list-style: none;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-}
+  #main-text-set > h1 {
+    font-size: 10vw;
+    letter-spacing: 6vw;
+    margin: 0;
+    margin-top: 5%;
+    padding-bottom: 3%;
+  }
 
-#menu-list > a:link {
-  color: #0d0d0d;
-}
-#menu-list > a:visited {
-  color: #0d0d0d;
-}
-#menu-list > a:hover {
-  color: #0d0d0d;
-  opacity: 0.6;
-}
-#menu-list > a:active {
-  color: #0d0d0d;
-}
+  #main-text-set > h1 span {
+    margin-right: -5%;
+  }  
 
-.menu-img {
-  display: block;
-  padding-top: 5%;
-  padding-bottom: 10%;
-  padding-left:20%;
-  width: 60%;
-}
+  #main-text-set > h3 {
+    font-size: 6vw;
+    margin: 0;
+    padding-bottom: 2%;
+  }
 
-.menu-title {
-  -ms-writing-mode: tb-rl;
-  -webkit-writhing-mode: vertical-rl;
-	writing-mode: vertical-rl;
-  padding-bottom: 20%;
-  width: 40%;
-  margin: 0 auto;
-}
+  .catchcopy-japanese {
+    font-size: 4vw;
+    margin: 0;
+    padding-bottom: 2%;
+  }
 
+  .catchcopy-english {
+    display: none;
+  }
 
-#main-text-set {
-  width: 40%;
-  font-family: "Potta One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-}
+  .catchcopy-english-sp {
+    font-size: 4vw;
+    margin: 0;
+    padding-bottom: 5%;
+  }
 
-#main-text-set > h1 {
-  font-size: 8vw;
-  letter-spacing: 2vw;
-  margin: 0;
-  padding-top: 10%;
-  padding-bottom: 3%;
-}
+  #img-container {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+  }
 
-#main-text-set > h3 {
-  font-size: 3.5vw;
-  margin: 0;
-  padding-bottom: 15%;
-}
+  .main-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: img-anime 25S infinite;
+  }
 
-.catchcopy-japanese {
-  font-size: 1.5vw;
-  margin: 0;
-  padding-bottom: 5%;
-}
+  /* About okinawa */
+  #what {
+    width: 100%;
+    padding-bottom: 5%;
+  }
 
-.catchcopy-english {
-  font-size: 1.5vw;
-  margin: 0;
-  padding-bottom: 2%;
-}
+  #what-set {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0, 5%;
+  }
 
-#img-container {
-  width: 55%;
-  height: 50vw;
-  overflow: hidden;
-  position: relative;
-}
+  #what-img-set {
+    display: none;
+  }
 
-.main-img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  animation: img-anime 25S infinite;
+  #what-img-set-sp {
+    width: 100%;
+    display: flex;
+  }
+
+  #what-img-set-sp > div {
+    width: 20%;
+  }
+
+  .what-img {
+    display: block;
+    width: 100%;
+  }
+
+  .nature-img{
+    opacity: 1;
+    border: 2px solid #8CFEFE;
+  }
+
+  .spot-img {
+    opacity: 0.5;
+  }
+
+  .eat-img {
+    opacity: 0.5;
+  }
+
+  .culture-img {
+    opacity: 0.5;
+  }
+
+  .history-img {
+    opacity: 0.5;
+  }
+
+  #what-text-set {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #what-text-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 6vw;
+    text-align: center;
+    margin: 0;
+  }
+
+  #what-text-set > h4 {
+    font-family: "Potta One", system-ui;
+    font-size: 4.5vw;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  /* 5つの魅力 */
+  #what-container {
+    width: 90%;
+    height: 82vw;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .nature-set{
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .spot-set {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .eat-set {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .culture-set {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .history-set {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .what-title-img {
+    display: block;
+    width: 10%;
+    height: auto;
+  }
+
+  .what-title-set > h5 {
+    width: 40%;
+    font-family: "Noto Sans JP";
+    font-size: 4vw;
+    letter-spacing: 1VW;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .what-title-set {
+    display: flex;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 5%;
+  }
+
+  .nature-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 3.5vw;
+    color: #378EDB;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .spot-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 3.5vw;
+    color: #FF00AE;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .eat-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 3.5vw;
+    color: #EBAE2C;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .culture-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 3.5vw;
+    color: #012701;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .history-set > h6 {
+    font-family: "Noto Sans JP";
+    font-size: 3.5vw;
+    color: #4B4B4B;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .what-text {
+    width: 100%;
+    font-family: "Noto Sans JP";
+    font-size: 3vw;
+    letter-spacing: 0.3VW;
+    padding-top: 3%;
+    margin: 0 auto;
+  }
+
+  /* 地域ごとに見る */
+  #map {
+    width: 100%;
+    padding-bottom: 5%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #map-set {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #map-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 5vw;
+    position: static;
+  }
+
+  .map-pc {
+    display: none;
+  }
+
+  .map-sp {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    position: static;
+  }
+
+  .region-text-set {
+    color: #ffffff;
+    width: 20%;
+    text-align: center;
+    padding: 1% 0;
+    border-radius: 15%;
+    text-decoration: none;
+  }
+
+  .region-text-set > h4 {
+    font-family: "Noto Sans JP";
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .region-text-set > p {
+    font-family: "Noto Sans JP";
+    font-size: 2.5vw;
+    margin: 0;
+  }
+
+  .north-top {
+    background-color: #02434F;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    opacity: 0.5;
+  }
+
+  .north-center {
+    background-color: #00839B;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    opacity: 0.5;
+  }
+
+  .north-bottom {
+    background-color: #37DAC9;
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    opacity: 0.5;
+  }
+
+  .middle {
+    background-color: #378FDA;
+    position: absolute;
+    top: 70%;
+    left: 55%;
+    opacity: 0.5;
+  }
+
+  .south-top {
+    background-color: #3759DA;
+    position: absolute;
+    top: 65%;
+    left: 5%;
+  }
+
+  .south-bottom {
+    background-color: #37C5DA;
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    opacity: 0.5;
+  }
+
+  .one-text {
+    padding: 10% 0;
+  }
+
+  /* 地域説明 */
+  #region {
+    width: 100%;
+    height: 410vw;
+    padding-top: 5%;
+    padding-bottom: 8%;
+  }
+
+  #region-conteiner {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .region-set {
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .region-name-set{
+    color: #ffffff;
+    width: 25%;
+    text-align: center;
+    padding: 1% 0;
+    border-radius: 10%;
+  }
+
+  .region-name-set > h4 {
+    font-family: "Noto Sans JP";
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .region-name-set > p {
+    font-family: "Noto Sans JP";
+    font-size: 2.5vw;
+    margin: 0;
+  }
+
+  .north-top-name {
+    background-color: #02434F;
+  }
+
+  .north-center-name {
+    background-color: #00839B;
+  }
+
+  .north-bottom-name {
+    background-color: #37DAC9;
+  }
+
+  .middle-name {
+    background-color: #378FDA;
+  }
+
+  .south-top-name {
+    background-color: #3759DA;
+  }
+
+  .south-bottom-name {
+    background-color: #37C5DA;
+  }
+
+  .one-text {
+    padding: 10% 0;
+  }
+
+  .region-title {
+    font-family: "Noto Sans JP";
+    font-size: 3.2vw;
+    font-weight: bold;
+    margin: 2% 0;
+  }
+
+  .region-text {
+    font-family: "Noto Sans JP";
+    font-size: 3vw;
+    margin: 0;
+    padding-bottom: 3%;
+  }
+
+  .region-contents > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 4vw;
+    text-decoration-line: underline;
+    text-decoration-color: #8CFEFE;
+  }
+
+  .region-imag-set-three {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .region-img-set-two {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .region-img-set-one {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .region-img-one {
+    width: 45%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    
+  }
+
+  .region-img-two {
+    width: 45%;
+    padding-bottom: 5%;
+  }
+
+  .region-img-three {
+    width: 45%;
+    padding-bottom: 5%;
+  }
+
+  .region-img-last{
+    margin: 0 auto;
+  }
+  .region-img {
+    width: 100%;
+  }
+
+  .region-img-name {
+    font-family: "Noto Sans JP";
+    font-size: 2.5vw;
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+  }
+
+  .region-version-set{
+    width: 100%;
+    padding: 2% 0;
+  }
+  .region-version {
+    font-family: "Noto Sans JP";
+    font-size: 3vw;
+  }
+
+  .region-version > span {
+    font-family: "Noto Sans JP";
+    font-size: 3.2vw;
+    font-weight: bold;
+  }
+
+  .north-top-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .north-center-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .north-bottom-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .middle-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .south-top-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .south-bottom-set {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  #return-region {
+    width: 20%;
+    float: right;
+    padding-top: 2%;
+    margin-right: 5%;
+  }
+
+  .return-region-img {
+    display: block;
+    width: 100%;
+  }
+
+  /* おすすめスポット */
+  #suggest {
+    width: 100%;
+    margin-top: 20%;
+    padding-bottom: 5%;
+  }
+
+  #suggest-set {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #suggest-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 5vw;
+    margin: 0;
+    padding-bottom: 3%;
+  }
+
+  .suggest-title {
+    font-family: "Noto Sans JP";
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .suggest-text {
+    font-family: "Noto Sans JP";
+    font-size: 3vw;
+  }
+
+  /* 離島 */
+  #island {
+    width: 100%;
+    margin-top: 8%;
+    padding-bottom: 5%;
+  }
+
+  #island-set {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #island-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 5vw;
+    margin: 0;
+    padding-bottom: 3%;
+  }
+
+  .island-img-set-two {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .island-img-two {
+    width: 45%;
+  }
+
+  .island-title {
+    font-family: "Noto Sans JP";
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .island-text {
+    font-family: "Noto Sans JP";
+    font-size: 3vw;
+  }
+
+  .island-text > span {
+    font-size: 3.2vw;
+    font-weight: bold;
+  }
+
+  /* その他離島 */
+  #island-other {
+    width: 100%;
+    padding-bottom: 60vw;
+    margin: 0 auto;
+  }
+
+  #island-other-set {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #island-other-set > h3 {
+    font-family: "Potta One", system-ui; 
+    font-size: 4vw;
+    text-decoration-line: underline;
+    text-decoration-color: #8CFEFE;
+    margin: 0;
+    padding-bottom: 3%;
+    position: static;
+  }
+
+  #island-other-img-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    position: static;
+  }
+
+  .island-other-left {
+    width: 50%;
+  }
+
+  .island-other-lord {
+    width: 10%;
+    padding: 1% 0;
+  }
+
+  .island-other-center {
+    width: 35%;
+  }
+
+  .island-other-right {
+    width: 50%;
+    padding-top: 65vw;
+  }
+
+  .island-other-img {
+    display: inline-block;
+    width: 100%;
+  } 
+
+  #island-other-text-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 38vw;
+    left: 0;
+  }
+
+  .island-other-text-left {
+    width: 45%;
+  }
+
+  .island-other-text-center {
+    padding-left: 15%;
+    width: 30%;
+  }
+
+  .island-other-text-right {
+    width: 50%;
+    padding-top: 35vw;
+  }
+
+  .island-other-title {
+    font-family: "Noto Sans JP";
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .island-other-text {
+    font-family: "Noto Sans JP";
+    font-size: 3vw;
+  }
+
+  header {
+    text-align: center;
+    background-color: #8CFEFE;
+    padding: 2% 0;
+  }
+
+  header > p {
+    font-family: "Noto Sans JP";
+    font-size: 2.5vw;
+    margin: 0;
+    line-height: 3.5vw;
+  }
 }
 
 /* メインイメージアニメーション */
@@ -176,694 +1716,4 @@ body {
   25% {opacity: 1;}
   30% {opacity: 0;}
   100% {opacity: 0;}
-}
-
-/* About okinawa */
-#what {
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-#what-set {
-  width: 90%;
-  display: flex;
-  margin: 0 auto;
-  padding: 0, 5%;
-}
-
-#what-img-set {
-  width: 60%;
-}
-
-#what-img-set > table {
-  width:90%;
-}
-
-.what-img-top {
-  display: block;
-  width: 100%;
-}
-
-.what-img {
-  display: block;
-  width: 100%;
-}
-
-.nature-img{
-  opacity: 1;
-  border: 2px solid #8CFEFE;
-}
-
-.spot-img {
-  opacity: 0.5;
-}
-
-.eat-img {
-  opacity: 0.5;
-}
-
-.culture-img {
-  opacity: 0.5;
-}
-
-.history-img {
-  opacity: 0.5;
-}
-
-#what-text-set {
-  width: 40%;
-  margin: 0 auto;
-}
-
-#what-text-set > h3 {
-  font-family: "Potta One", system-ui; 
-  font-size: 2.5vw;
-  text-align: center;
-  margin: 0;
-}
-
-#what-text-set > h4 {
-  font-family: "Potta One", system-ui;
-  font-size: 1.8vw;
-  text-align: center;
-  margin: 0;
-  padding-top: 3%;
-}
-
-/* 5つの魅力 */
-#what-container {
-  width: 90%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.nature-set{
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.spot-set {
-  width: 100%;
-  margin: 0 auto;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.eat-set {
-  width: 100%;
-  margin: 0 auto;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.culture-set {
-  width: 100%;
-  margin: 0 auto;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.history-set {
-  width: 100%;
-  margin: 0 auto;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.what-title-img {
-  display: block;
-  width: 10%;
-  height: auto;
-}
-
-.what-title-set > h5 {
-  width: 40%;
-  font-family: "Noto Sans JP";
-  font-size: 1.8vw;
-  letter-spacing: 1VW;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.what-title-set {
-  display: flex;
-  width: 90%;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 5%;
-}
-
-.nature-set > h6 {
-  font-family: "Noto Sans JP";
-  font-size: 1.5vw;
-  color: #378EDB;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-  padding-top: 3%;
-}
-
-.spot-set > h6 {
-  font-family: "Noto Sans JP";
-  font-size: 1.5vw;
-  color: #FF00AE;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-  padding-top: 3%;
-}
-
-.eat-set > h6 {
-  font-family: "Noto Sans JP";
-  font-size: 1.5vw;
-  color: #EBAE2C;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-  padding-top: 3%;
-}
-
-.culture-set > h6 {
-  font-family: "Noto Sans JP";
-  font-size: 1.5vw;
-  color: #012701;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-  padding-top: 3%;
-}
-
-.history-set > h6 {
-  font-family: "Noto Sans JP";
-  font-size: 1.5vw;
-  color: #4B4B4B;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-  padding-top: 3%;
-}
-
-.what-text {
-  width: 100%;
-  font-family: "Noto Sans JP";
-  font-size: 1.2vw;
-  letter-spacing: 0.3VW;
-  padding-top: 3%;
-  margin: 0 auto;
-}
-
-/* 地域ごとに見る */
-#map {
-  width: 100%;
-  padding-bottom: 5%;
-  margin: 0 auto;
-  position: relative;
-}
-
-#map-set {
-  width: 90%;
-  margin: 0 auto;
-}
-
-#map-set > h3 {
-  font-family: "Potta One", system-ui; 
-  font-size: 2.5vw;
-  position: static;
-}
-
-#map-set > img {
-  display: block;
-  width: 70%;
-  margin: 0 auto;
-  position: static;
-}
-
-.region-text-set {
-  color: #ffffff;
-  width: 10%;
-  text-align: center;
-  padding: 1% 0;
-  border-radius: 15%;
-  text-decoration: none;
-}
-
-.region-text-set > h4 {
-  font-family: "Noto Sans JP";
-  font-size: 1.6vw;
-  font-weight: bold;
-  margin: 0;
-}
-
-.region-text-set > p {
-  font-family: "Noto Sans JP";
-  font-size: 1.2vw;
-  margin: 0;
-}
-
-.north-top {
-  background-color: #02434F;
-  position: absolute;
-  top: 10%;
-  left: 80%;
-  opacity: 0.5;
-}
-
-.north-center {
-  background-color: #00839B;
-  position: absolute;
-  top: 25%;
-  left: 15%;
-  opacity: 0.5;
-}
-
-.north-bottom {
-  background-color: #37DAC9;
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  opacity: 0.5;
-}
-
-.middle {
-  background-color: #378FDA;
-  position: absolute;
-  top: 65%;
-  left: 55%;
-  opacity: 0.5;
-}
-
-.south-top {
-  background-color: #3759DA;
-  position: absolute;
-  top: 75%;
-  left: 8%;
-}
-
-.south-bottom {
-  background-color: #37C5DA;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  opacity: 0.5;
-}
-
-.one-text {
-  padding: 10% 0;
-}
-
-/* 地域説明 */
-#region {
-  width: 100%;
-  height: 165vw;
-  padding-top: 5%;
-  padding-bottom: 8%;
-}
-
-#region-conteiner {
-  width: 90%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.region-set {
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.region-name-set{
-  color: #ffffff;
-  width: 15%;
-  text-align: center;
-  padding: 1% 0;
-  border-radius: 10%;
-}
-
-.region-name-set > h4 {
-  font-family: "Noto Sans JP";
-  font-size: 1.6vw;
-  font-weight: bold;
-  margin: 0;
-}
-
-.region-name-set > p {
-  font-family: "Noto Sans JP";
-  font-size: 1.2vw;
-  margin: 0;
-}
-
-.north-top-name {
-  background-color: #02434F;
-}
-
-.north-center-name {
-  background-color: #00839B;
-}
-
-.north-bottom-name {
-  background-color: #37DAC9;
-}
-
-.middle-name {
-  background-color: #378FDA;
-}
-
-.south-top-name {
-  background-color: #3759DA;
-}
-
-.south-bottom-name {
-  background-color: #37C5DA;
-}
-
-.one-text {
-  padding: 10% 0;
-}
-
-.region-title {
-  font-family: "Noto Sans JP";
-  font-size: 1.6vw;
-  font-weight: bold;
-}
-
-.region-text {
-  font-family: "Noto Sans JP";
-  font-size: 1.4vw;
-  padding-bottom: 3%;
-}
-
-.region-contents > h3 {
-  font-family: "Potta One", system-ui; 
-  font-size: 2.3vw;
-  text-decoration-line: underline;
-  text-decoration-color: #8CFEFE;
-}
-
-.region-img-set {
-  width: 100%;
-  display:flex;
-  justify-content: space-between;
-}
-
-.region-img-set-two {
-  width: 80%;
-  display:flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.region-img-one {
-  width:40%;
-  
-}
-
-.region-img-two {
-  width: 45%;
-}
-
-.region-img-three {
-  width: 30%;
-}
-
-.region-img {
-  width: 100%;
-}
-
-.region-img-name {
-  font-family: "Noto Sans JP";
-  font-size: 1vw;
-  font-weight: bold;
-  text-align: right;
-  margin: 0;
-}
-
-.region-version-set{
-  width: 100%;
-  padding-bottom: 1%;
-}
-.region-version {
-  font-family: "Noto Sans JP";
-  font-size: 1.4vw;
-}
-
-.region-version > span {
-  font-family: "Noto Sans JP";
-  font-size: 1.8vw;
-  font-weight: bold;
-}
-
-.region-img-one {
-  width: 40%;
-  margin: 0 auto;
-}
-
-.north-top-set {
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-.north-center-set {
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-.north-bottom-set {
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-.middle-set {
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-.south-top-set {
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.south-bottom-set {
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-#return-region {
-  width: 15%;
-  float: right;
-  padding-top: 2%;
-  margin-right: 5%;
-  padding-bottom: 5%;
-}
-
-.return-region-img {
-  display: block;
-  width: 100%;
-}
-
-/* おすすめスポット */
-#suggest {
-  width: 100%;
-  margin-top: 10%;
-  padding-bottom: 5%;
-}
-
-#suggest-set {
-  width: 90%;
-  margin: 0 auto;
-}
-
-#suggest-set > h3 {
-  font-family: "Potta One", system-ui; 
-  font-size: 2.5vw;
-  margin: 0;
-  padding-bottom: 3%;
-}
-
-.suggest-title {
-  font-family: "Noto Sans JP";
-  font-size: 1.4vw;
-  font-weight: bold;
-  text-align: center;
-}
-
-.suggest-text {
-  font-family: "Noto Sans JP";
-  font-size: 1.2vw;
-}
-
-/* 離島 */
-#island {
-  width: 100%;
-  margin-top: 8%;
-  padding-bottom: 5%;
-}
-
-#island-set {
-  width: 90%;
-  margin: 0 auto;
-}
-
-#island-set > h3 {
-  font-family: "Potta One", system-ui; 
-  font-size: 2.5vw;
-  margin: 0;
-  padding-bottom: 3%;
-}
-
-.island-img-set-two {
-  width: 85%;
-  display:flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.island-img-two {
-  width: 45%;
-}
-
-.island-title {
-  font-family: "Noto Sans JP";
-  font-size: 1.6vw;
-  font-weight: bold;
-  text-align: center;
-}
-
-.island-text {
-  font-family: "Noto Sans JP";
-  font-size: 1.4vw;
-}
-
-.island-text > span {
-  font-size: 1.6vw;
-  font-weight: bold;
-}
-
-/* その他離島 */
-#island-other {
-  width: 100%;
-  padding-bottom: 5%;
-  margin: 0 auto;
-}
-
-#island-other-set {
-  width: 90%;
-  margin: 0 auto;
-}
-
-#island-other-set > h3 {
-  font-family: "Potta One", system-ui; 
-  font-size: 2.3vw;
-  text-decoration-line: underline;
-  text-decoration-color: #8CFEFE;
-  margin: 0;
-  padding-bottom: 3%;
-}
-
-#island-other-img-set {
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-}
-
-.island-other-left {
-  width: 30%;
-}
-
-.island-other-lord {
-  width: 7%;
-  padding: 1% 0;
-}
-.island-other-center {
-  width: 20%;
-}
-
-.island-other-right {
-  width: 30%;
-  padding-left: 13%;
-}
-
-.island-other-img {
-  display: inline-block;
-  width: 100%;
-} 
-
-#island-other-text-set {
-  display: flex;
-  width: 100%;
-}
-
-.island-other-text-left {
-  width: 30%;
-}
-
-.island-other-text-center {
-  width: 21%;
-  padding-left: 7%;
-  margin: 0 auto;
-}
-
-.island-other-text-right {
-  width: 30%;
-  padding-left: 12%
-}
-
-.island-other-title {
-  font-family: "Noto Sans JP";
-  font-size: 1.4vw;
-  font-weight: bold;
-  text-align: center;
-}
-
-.island-other-text {
-  font-family: "Noto Sans JP";
-  font-size: 1.2vw;
-}
-
-header {
-  text-align: center;
-  background-color: #8CFEFE;
-  padding: 2% 0;
-}
-
-header > p {
-  font-family: "Noto Sans JP";
-  font-size: 1vw;
-  margin: 0;
-  line-height: 2vw;
 }

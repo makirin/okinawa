@@ -21,6 +21,7 @@
   <body>
     <!-- メインビジュアル -->
     <section id="main">
+      <!-- PC用メニュー -->
       <div id="menu">
         <div id="menu-inner">
         <ul id="ul-top">
@@ -55,13 +56,26 @@
         </ul>
         </div>
       </div>
+
+      <!-- スマホ用メニューボタン -->
+      <img id="menu-sp" src="img/button-menu.png" alt="ナビゲーションを開く" onclick="document.getElementById('nav-sp').style.display = 'block'">
+      <!-- スマホ用ナビゲーション -->
+      <nav id="nav-sp">
+        <img id="close" src="img/button-close.png" alt="ナビゲーションを閉じる" onclick="document.getElementById('nav-sp').style.display = 'none'">
+        <a class="menu-title" href="#what" onclick="document.getElementById('nav-sp').style.display = 'none'">沖縄県とは？</a>
+        <a class="menu-title" href="#map" onclick="document.getElementById('nav-sp').style.display = 'none'">地域ごとに見る</a>
+        <a class="menu-title" href="#suggest" onclick="document.getElementById('nav-sp').style.display = 'none'">おすすめスポット</a>
+        <a class="menu-title" href="#island" onclick="document.getElementById('nav-sp').style.display = 'none'">のんびり離島へ</a>
+      </nav>
+
       <div id="main-text-set">
-        <h1>沖縄</h1>
+        <h1>沖<span>縄</span></h1>
         <h3>-心の故郷-</h3>
         <h4 class="catchcopy-japanese">あなたにとって特別な場所になる</h4>
         <h4 class="catchcopy-english">It will be</h4>
         <h4 class="catchcopy-english">a special place</h4>
         <h4 class="catchcopy-english">for you</h4>
+        <h4 class="catchcopy-english-sp">It will be a special place for you</h4>
       </div>
       <div id="img-container">
         <img class="main-img" src="img/top/top1.jpg">
@@ -192,6 +206,23 @@
             </article>
           </div>
         </div>
+        <div id="what-img-set-sp">
+          <div>
+            <a class="nature-a" href="#what"><img class="what-img nature-img" src="img/five/nature-sp.jpg" alt="海の画像"></a></td>
+          </div>
+          <div>
+            <a class="spot-a" href="#what"><img class="what-img spot-img" src="img/five/spot.jpg" alt="美ら海水族館の画像"></a></td>
+          </div>
+          <div>
+            <a class="eat-a" href="#what"><img class="what-img eat-img" src="img/five/eat.jpg" alt="沖縄そばの画像"></a></td>
+          </div>
+          <div>
+            <a class="culture-a" href="#what"><img class="what-img culture-img" src="img/five/culture.jpg" alt="エイサーの画像"></a></td>
+          </div>
+          <div>
+            <a class="history-a" href="#what"><img class="what-img history-img" src="img/five/history.jpg" alt="平和の礎の画像"></a></td>
+          </div>  
+        </div>
       </div>
     </section>
 
@@ -199,7 +230,8 @@
     <section id="map">
       <div id="map-set">
         <h3>地域ごとに見る</h3>
-        <img src="img/map.jpg" alt="地図">
+        <img class="map-pc" src="img/map.jpg" alt="地図">
+        <img class="map-sp" src="img/map-sp.png" alt="地図">
         <a href="#region" class="region-text-set north-top">
             <h4>北部</h4>
             <p>(やんばる)</p>
@@ -238,16 +270,16 @@
               <p class="region-text">やんばると呼ばれる沖縄本島北部。亜熱帯の森には絶滅危惧種も含め、たくさんの植物が自生しています。<br>また、ヤンバルクイナなど貴重な動物も見ることが出来るかもしれません。<br>貴重な大自然を堪能しましょう。</p>
             </div>
             <h3>観光へ</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-imag-set-three">
               <div class="region-img-three">
                 <img class="region-img" src="img/spot/01hetomisaki1.jpg" alt="辺戸岬">
                 <p class="region-img-name">辺戸岬</p>
               </div>
               <div class="region-img-three">  
-                <img class="region-img" src="img/spot/02tenbodai1.jpg" alt="六田原展望台">
+                <img class="region-img " src="img/spot/02tenbodai1.jpg" alt="六田原展望台">
                 <p class="region-img-name">六田原展望台</p>
               </div>
-              <div class="region-img-three">
+              <div class="region-img-three region-img-last">
                 <img class="region-img" src="img/spot/03oishisanrin1.jpg" alt="大石林山">
                 <p class="region-img-name">大石林山</p>   
               </div>
@@ -264,7 +296,7 @@
               </p>
             </div>
             <h3>体験する</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-img-set-one">
               <div class="region-img-one">
                 <img class="region-img" class="region-img" src="img/active/hirugi1.jpg" alt="東村ふれあいヒルギ公園">
                 <p class="region-img-name">東村ふれあいヒルギ公園</p>
@@ -314,7 +346,7 @@
               <p class="region-text">水族館は有名ですが、手つかずの自然など沖縄の原風景が広がります。<br>東海岸と西海岸に面しており、内陸部には濃緑の森や山。<br>絶景が楽しめるドライブスポットもたくさんあります。</p>
             </div>
             <h3>観光へ</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-imag-set-three">
               <div class="region-img-three">
                 <img class="region-img" src="img/spot/04my_churaumi1.JPG" alt="美ら海水族館">
                 <p class="region-img-name">美ら海水族館</p>
@@ -323,7 +355,7 @@
                 <img class="region-img" src="img/spot/05my_nakijin1.JPG" alt="今帰仁城跡">
                 <p class="region-img-name">今帰仁城跡</p>
               </div>
-              <div class="region-img-three">
+              <div class="region-img-three region-img-last">
                 <img class="region-img" src="img/spot/06kouri1.jpg" alt="古宇利島">
                 <p class="region-img-name">古宇利島</p>   
               </div>
@@ -341,7 +373,7 @@
               </p>
             </div>
             <h3>体験する</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-img-set-one">
               <div class="region-img-one">
                 <img class="region-img" class="region-img" src="img/active/sezoko1.jpg" alt="瀬底島シュノーケリング">
                 <p class="region-img-name">瀬底島シュノーケリング</p>
@@ -356,7 +388,7 @@
               </p>
             </div>
             <h3>お腹をみたす</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-img-set-one">
               <div class="region-img-one">
                 <img class="region-img" src="img/eat/03kyota1.jpg" alt="道の駅許田">
                 <p class="region-img-name">道の駅許田</p>
@@ -387,7 +419,7 @@
               <p class="region-text">西海岸沿いにある恩納村はリゾートホテルの街であり、マリンアクティビティが豊富です。<br>その他にも、雨の日や空き時間に楽しめるスポットもたくさんあります。<br>東海岸沿いでは浜の景観や田畑の風景が楽しめる他、アメリカ文化の影響受けた町並みも特徴的です。</p>
             </div>
             <h3>観光へ</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-imag-set-three">
               <div class="region-img-three">
                 <img class="region-img" src="img/spot/07busena1.jpg" alt="ブセナ海中公園">
                 <p class="region-img-name">ブセナ海中公園</p>
@@ -396,7 +428,7 @@
                 <img class="region-img" src="img/spot/08manzamou1.jpg" alt="万座毛">
                 <p class="region-img-name">万座毛</p>
               </div>
-              <div class="region-img-three">
+              <div class="region-img-three region-img-last">
                 <img class="region-img" src="img/spot/09maedamisaki1.jpg" alt="真栄田岬">
                 <p class="region-img-name">真栄田岬</p>   
               </div>
@@ -435,7 +467,7 @@
               </p>
             </div>
             <h3>お腹をみたす</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-imag-set-three">
               <div class="region-img-three">
                 <img class="region-img" src="img/eat/04my_ebi1.JPG" alt="車海老 球屋">
                 <p class="region-img-name">車海老 球屋</p>
@@ -444,7 +476,7 @@
                 <img class="region-img" src="img/eat/05manza_shisetsu1.jpg" alt="万座毛周辺活性化施設">
                 <p class="region-img-name">万座毛周辺活性化施設</p>
               </div>
-              <div class="region-img-three">
+              <div class="region-img-three region-img-last">
                 <img class="region-img" src="img/eat/06onna1.jpg" alt="おんなの駅なかゆくい市場">
                 <p class="region-img-name">おんなの駅なかゆくい市場</p>
               </div>
@@ -474,7 +506,7 @@
               <p class="region-text">やちむんの里、読谷村。リゾートな北谷町。<br>米軍基地・嘉手納町。沖縄とアメリカの文化が混じりあう沖縄市。<br>癒しを求めて、うるま市。などなど、様々なまち模様が味わえる地域です。</p>
             </div>
             <h3>観光へ</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-imag-set-three">
               <div class="region-img-three">
                 <img class="region-img" src="img/spot/10kaicyu1.jpg" alt="海中道路">
                 <p class="region-img-name">海中道路</p>
@@ -483,7 +515,7 @@
                 <img class="region-img" src="img/spot/11my_hamahiga1.JPG" alt="浜比嘉島">
                 <p class="region-img-name">浜比嘉島</p>
               </div>
-              <div class="region-img-three">
+              <div class="region-img-three region-img-last">
                 <img class="region-img" src="img/spot/12amerikan1.jpg" alt="美浜アメリカンビレッジ">
                 <p class="region-img-name">美浜アメリカンビレッジ</p>   
               </div>
@@ -503,7 +535,7 @@
               </p>
             </div>
             <h3>体験する</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-img-set-one">
               <div class="region-img-one">
                 <img class="region-img" class="region-img" src="img/active/hijyagawa1.jpg" alt="比謝川">
                 <p class="region-img-name">比謝川</p>
@@ -556,7 +588,7 @@
               <p class="region-text">那覇市にはショッピングを楽しめるスポットがたくさん。<br>また、様々なビーチで海水浴やマリンアクティビティが楽しめます。<br>そして、琉球王国の都だった首里で歴史を感じてみましょう。</p>
             </div>
             <h3>観光へ</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-imag-set-three">
               <div class="region-img-three">
                 <img class="region-img" src="img/spot/13my_shuri1.JPG" alt="首里城">
                 <p class="region-img-name">首里城</p>
@@ -565,7 +597,7 @@
                 <img class="region-img" src="img/spot/14umikaji1.jpg" alt="ウミカジテラス">
                 <p class="region-img-name">ウミカジテラス</p>
               </div>
-              <div class="region-img-three">
+              <div class="region-img-three region-img-last">
                 <img class="region-img" src="img/spot/15my_kokusai1.JPG" alt="国際通り">
                 <p class="region-img-name">国際通り</p>   
               </div>
@@ -583,7 +615,7 @@
               </p>
             </div>
             <h3>体験する</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-img-set-one">
               <div class="region-img-one">
                 <img class="region-img" class="region-img" src="img/active/isyotaiken1.jpg" alt="琉球衣装体験(首里城)">
                 <p class="region-img-name">琉球衣装体験(首里城)</p>
@@ -637,16 +669,16 @@
               <p class="region-text">美しい自然を感じるとともに歴史や文化が学べる場所です。<br>沖縄らしい自然を満喫しつつ、史跡を訪ねて沖縄戦についても<br>是非学んでみてください。</p>
             </div>
             <h3>観光へ</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-imag-set-three">
               <div class="region-img-three">
                 <img class="region-img" src="img/spot/16niraikanai1.jpg" alt="ニライカナイ橋">
                 <p class="region-img-name">ニライカナイ橋</p>
               </div>
               <div class="region-img-three">  
                 <img class="region-img" src="img/spot/17himeyuri1.jpg" alt="ひめゆりの塔・ひめゆり平和祈念資料館">
-                <p class="region-img-name">ひめゆりの塔・ひめゆり平和祈念資料館</p>
+                <p class="region-img-name">ひめゆりの塔・平和祈念資料館</p>
               </div>
-              <div class="region-img-three">
+              <div class="region-img-three region-img-last">
                 <img class="region-img" src="img/spot/18my_utaki1.JPG" alt="斎場御嶽">
                 <p class="region-img-name">斎場御嶽</p>   
               </div>
@@ -664,7 +696,7 @@
               </p>
             </div>
             <h3>体験する</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-imag-set-three">
               <div class="region-img-three">
                 <img class="region-img" src="img/active/ryukyu_glass1.jpg" alt="琉球ガラス村">
                 <p class="region-img-name">琉球ガラス村</p>
@@ -673,7 +705,7 @@
                 <img class="region-img" src="img/active/my_gangara1.JPG" alt="ガンガラーの谷">
                 <p class="region-img-name">ガンガラーの谷</p>
               </div>
-              <div class="region-img-three">
+              <div class="region-img-three region-img-last">
                 <img class="region-img" src="img/active/world1.jpg" alt="おきなわワールド">
                 <p class="region-img-name">おきなわワールド</p>   
               </div>
@@ -690,7 +722,7 @@
               </p>
             </div>
             <h3>お腹をみたす</h3>
-            <div class="region-img-set">
+            <div class="region-img-set region-img-set-one">
               <div class="region-img-one">
                 <img class="region-img" src="img/eat/11my_kabu1.JPG" alt="CAVE CAFE">
                 <p class="region-img-name">CAVE CAFE</p>
@@ -718,8 +750,8 @@
     <!-- おすすめスポット -->
     <section id="suggest">
       <div id="suggest-set">
-        <h3>他にも...オススメスポット</h3>
-        <div class="region-img-set">
+        <h3>他にも...おすすめスポット</h3>
+        <div class="region-img-set region-imag-set-three">
           <div class="region-img-three">
             <img class="region-img" src="img/suggest/01my_tama1.JPG" alt="玉陵">
             <p class="suggest-title">玉陵</p>
@@ -734,7 +766,7 @@
               旧海軍司令部壕は沖縄線における日本海軍沖縄方面根拠地隊司令部にあった場所で沖縄線の悲惨さを後世に伝える戦跡公園として整備されています。<br>特徴は、兵士が壮絶な最期を遂げた壕内の一部が公開されていること。また、司令官室・作戦室など当時のまま残された遺構を見学できます。<br>沖縄は戦争なしでは語れない県です。沖縄を訪れた際は１つでいいので戦跡を見てほしい。そんな風に思います。
             </p>
           </div>
-          <div class="region-img-three">
+          <div class="region-img-three region-img-last">
             <img class="region-img" src="img/suggest/03my_ruby1.jpg" alt="軽食の店 ルビー">
             <p class="suggest-title">軽食の店 ルビー</p>
             <p class="suggest-text">
@@ -816,7 +848,7 @@
       </div>
     </section>
     <header>
-      <p>mail:chinajun.web@gmail.com<br>
+      <p>mail : chinajun.web@gmail.com<br>
       <p>&copy;chinajunWeb</p>
     </header>      
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
