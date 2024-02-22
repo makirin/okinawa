@@ -297,7 +297,7 @@ $(document).ready(function() {
     $('.middle').on('click',function(){
       $('.middle-set').show();
       $('#region-conteiner container').not('.middle-set').hide();
-      $('#region').css('height', '400vw')
+      $('#region').css('height', '410vw')
     });
 
     // 空港周辺
@@ -321,7 +321,7 @@ $(document).ready(function() {
     $('.south-bottom').on('click',function(){
       $('.south-bottom-set').show();
       $('#region-conteiner container').not('.south-bottom-set').hide();
-      $('#region').css('height', '440vw') 
+      $('#region').css('height', '450vw') 
     });
   }
 });
