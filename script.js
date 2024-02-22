@@ -285,7 +285,7 @@ $(document).ready(function() {
     $('.north-bottom').on('click',function(){
       $('.north-bottom-set').show();
       $('#region-conteiner container').not('.north-bottom-set').hide();
-      $('#region').css('height', '455vw')
+      $('#region').css('height', '465vw')
     });
 
     // 中部
@@ -321,7 +321,7 @@ $(document).ready(function() {
     $('.south-bottom').on('click',function(){
       $('.south-bottom-set').show();
       $('#region-conteiner container').not('.south-bottom-set').hide();
-      $('#region').css('height', '450vw') 
+      $('#region').css('height', '460vw') 
     });
   }
 });
