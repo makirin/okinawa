@@ -261,7 +261,7 @@ $(document).ready(function() {
     $('.north-top').on('click',function(){
       $('.north-top-set').show();
       $('#region-conteiner container').not('.north-top-set').hide();
-      $('.region-sp').css('height', '410vw')
+      $('#region').css('height', '410vw')
     });
 
     // 名護
@@ -273,7 +273,7 @@ $(document).ready(function() {
     $('.north-center').on('click',function(){
       $('.north-center-set').show();
       $('#region-conteiner container').not('.north-center-set').hide();
-      $('.region-sp').css('height', '410vw')
+      $('#region').css('height', '410vw')
     });
 
     // 西海岸・東海岸
@@ -285,7 +285,7 @@ $(document).ready(function() {
     $('.north-bottom').on('click',function(){
       $('.north-bottom-set').show();
       $('#region-conteiner container').not('.north-bottom-set').hide();
-      $('.region-sp').css('height', '450vw')
+      $('#region').css('height', '455vw')
     });
 
     // 中部
@@ -297,7 +297,7 @@ $(document).ready(function() {
     $('.middle').on('click',function(){
       $('.middle-set').show();
       $('#region-conteiner container').not('.middle-set').hide();
-      $('.region-sp').css('height', '400vw')
+      $('#region').css('height', '400vw')
     });
 
     // 空港周辺
@@ -309,7 +309,7 @@ $(document).ready(function() {
     $('.south-top').on('click',function(){
       $('.south-top-set').show();
       $('#region-conteiner container').not('.south-top-set').hide();
-      $('.region-sp').css('height', '410vw') 
+      $('#region').css('height', '410vw') 
     });
 
     // 南部
@@ -321,7 +321,7 @@ $(document).ready(function() {
     $('.south-bottom').on('click',function(){
       $('.south-bottom-set').show();
       $('#region-conteiner container').not('.south-bottom-set').hide();
-      $('.region-sp').css('height', '440vw') 
+      $('#region').css('height', '440vw') 
     });
   }
 });
